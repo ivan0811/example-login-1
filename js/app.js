@@ -1,3 +1,4 @@
+document.cookie = "login=false";
 function logout() {
     document.cookie = "login=false";
     document.cookie = "username=";
@@ -107,7 +108,10 @@ if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.coo
         }
     }
 } else if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.cookie.indexOf("login") + 11) == "false") {
-    if (window.location.pathname != "/login.html") {
+    if(window.location.pathname.substring(16) == "/"){
+        location.replace("login.html");
+    }else{
+        if (window.location.pathname != "/login.html") {
         setTimeout(function () {
             location.replace("404.html");
         }, 0);
@@ -123,4 +127,5 @@ if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.coo
             }
         }
     }
+    }        
 }
