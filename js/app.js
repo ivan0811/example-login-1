@@ -37,7 +37,7 @@ for (let i = 0; i < get_input.length; i++) {
     });
 }
 var count_password = 0;
-if (window.location.pathname == "/login.html") {
+if (window.location.pathname.substring(16) == "/login.html") {
     document.querySelector('#login').addEventListener("click", function () {
         if (username.value == "") {
             get_alert[0].innerHTML = "Username tidak boleh kosong";
