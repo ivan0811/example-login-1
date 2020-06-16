@@ -99,7 +99,7 @@ if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.coo
     window.onpopstate = function () {
         history.go(1);
     };
-    if (window.location.pathname != "/index.html") {
+    if (window.location.pathname.substring(16) != "/index.html") {
         location.href = "404.html";
     }
     for (let i = 0; i < cookie_arr[0].length; i++) {
@@ -111,21 +111,21 @@ if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.coo
     if(window.location.pathname.substring(16) == "/"){
         location.replace("login.html");
     }else{
-        if (window.location.pathname != "/login.html") {
-        setTimeout(function () {
-            location.replace("404.html");
-        }, 0);
-    } else {
-        for (let i = 0; i < user.length; i++) {
-            if (get_user == i) {
-                username.value = user[0][get_user];
-                password.value = user[1][get_user];
-                for (let i = 0; i < 2; i++) {
-                    get_placeholder[i].style.margin = "-9px 10px";
+        if (window.location.pathname.substring(16) != "/login.html") {
+            setTimeout(function () {
+                location.replace("404.html");
+            }, 0);
+        } else {
+            for (let i = 0; i < user.length; i++) {
+                if (get_user == i) {
+                    username.value = user[0][get_user];
+                    password.value = user[1][get_user];
+                    for (let i = 0; i < 2; i++) {
+                        get_placeholder[i].style.margin = "-9px 10px";
+                    }
+                    save_user.checked = true;
                 }
-                save_user.checked = true;
             }
         }
-    }
     }        
 }
