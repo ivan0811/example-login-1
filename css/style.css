@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0px;
+}
+
+.container {
+    margin: auto;
+    width: max-content;
+}
+
+.login-box {
+    background-color: #ffffff;
+    width: 350px;
+    padding: 20px 40px;
+    box-shadow: 5px 10px 10px #adadad;
+    border-radius: 2px;
+}
+
+.center-item {
+    margin-top: 50%;
+}
+
+.login-title {
+    text-align: center;
+    color: #636363;
+}
+
+.login-input {
+    width: 100%;
+    margin: 10px 0px 10px;
+}
+
+
+.login-input input {
+    position: absolute;
+    width: 21%;
+    border: none;
+    outline: none;
+    z-index: 1;
+    background-color: transparent;
+    height: 40px;
+    padding: 0px 10px;
+    color: #636363;
+}
+
+.border-input {
+    margin: auto;
+    border: 1px #9c9c9c solid;
+    border-radius: 2px;
+    height: 35px;
+    width: 100%;
+}
+
+.login-placeholder {
+    position: absolute;
+    background-color: #ffffff;
+    margin: 9px 10px;
+    padding: 0px 3px;
+    z-index: 0;
+    font-size: medium;
+    color: #9c9c9c;
+    border-radius: 20px;
+}
+
+#login {
+    width: 100%;
+    border: none;
+    background-color: #63cbff;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 3px;
+    outline: none;
+    margin-top: 20px;
+}
+
+#login:hover {
+    background-color: #3bbeff;
+    cursor: pointer;
+}
+
+.alert {
+    padding: 0;
+    margin: 5px;
+    font-size: small;
+    color: red;
+    height: 15px;
+}
+
+.form-control {
+    margin: 30px 0px 10px;
+}
+
+nav {
+    background-color: #3bbeff;
+    height: 30px;
+    display: grid;
+    padding: 15px 20px;
+    grid-template-columns: 95% auto;
+}
+
+nav>h2 {
+    margin: 0px;
+    color: #ffffff;
+}
+
+nav>button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: medium;
+}
+
+nav>button:hover {
+    cursor: pointer;
+}
+
+.title-home {
+    color: #636363;
+}
+
+.show-block {
+    display: none;
+}
+
+.show-block>div {
+    display: flex;
+}
+
+.show-block>div>img {
+    margin: 14px;
+}
+
+@media only screen and (max-width:700px) {
+    nav {
+        background-color: #3bbeff;
+        height: 30px;
+        display: grid;
+        padding: 15px 20px;
+        grid-template-columns: 70% auto;
+    }
+
+    #login:focus {
+        background-color: #3bbeff;
+    }
+}

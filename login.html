@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="center-item">
+            <div class="login-box">
+                <h3 class="login-title">Login</h3>
+                <div class="form-control">
+                    <div class="login-input">
+                        <label class="login-placeholder">
+                            Username
+                        </label>
+                        <div class="border-input">
+                            <input type="text" id="username">
+                        </div>
+                        <p class="alert"></p>
+                    </div>
+                    <div class="login-input">
+                        <label class="login-placeholder">Password</label>
+                        <div class="border-input">
+                            <input type="password" id="password">
+                        </div>
+                        <p class="alert"></p>
+                    </div>
+                    <input type="checkbox" id="save_user"> Remember Me
+                    <button id="login">Login</button>
+                </div>
+            </div>
+            <div class="show-block">
+                <div class="login-box">
+                    <h3 class="login-title">Anda Terblokir sementara <span id="time"></span>
+                    </h3>
+                    <img src="gif/Rolling.gif" height="30px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.cookie.indexOf("login") + 10) ==
+            "true") {
+            document.querySelector(".container").innerHTML = " ";
+        }
+    </script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

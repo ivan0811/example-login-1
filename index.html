@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <h2>Example Login</h2>
+            <button onclick="logout()">Logout</button>
+        </nav>
+        <div class="container">
+            <div class="center-item">
+                <h1 class="title-home">Selamat Datang</h1>
+                <!-- <button onclick="show_cookie()">cookie</button> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        if (document.cookie.substring(document.cookie.indexOf("login") + 6, document.cookie.indexOf("login") + 11) ==
+            "false") {
+            document.querySelector("#container").innerHTML = " ";
+        }
+    </script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
